@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Sekolah XYZ</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+
+        nav a {
+            margin: 0 15px;
+            color: white;
+            text-decoration: none;
+        }
+
+        section {
+            margin: 20px;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+        }
+
+        h1, h2, h3 {
+            color: #333;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+            color: white;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        /* Pengaturan Halaman */
+        .content {
+            display: none;
+        }
+
+        .content.active {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Selamat Datang di Sekolah XYZ</h1>
+        <nav>
+            <a href="#" onclick="showPage('home')">Beranda</a>
+            <a href="#" onclick="showPage('pengumuman')">Pengumuman</a>
+            <a href="#" onclick="showPage('kontak')">Kontak</a>
+        </nav>
+    </header>
+
+    <div id="home" class="content active">
+        <section>
+            <h2>Profil Sekolah</h2>
+            <p>SMAN 20 KONAWE SELATAN adalah institusi pendidikan yang berkomitmen untuk menyediakan pendidikan berkualitas.</p>
+
+            <h3>Visi</h3>
+            <p>Mewujudkan generasi yang cerdas dan berbudi pekerti luhur.</p>
+
+            <h3>Misi</h3>
+            <ul>
+                <li>Menyediakan lingkungan belajar yang nyaman.</li>
+                <li>Menanamkan nilai-nilai moral sejak dini.</li>
+                <li>Mengembangkan kreativitas siswa.</li>
+            </ul>
+        </section>
+    </div>
+
+    <div id="pengumuman" class="content">
+        <section>
+            <h2>Pengumuman Terbaru</h2>
+            <ul>
+                <li>Upacara bendera akan dilaksanakan pada Senin, 20 Oktober 2024.</li>
+                <li>Libur semester dimulai pada 23 Desember 2024.</li>
+            </ul>
+        </section>
+    </div>
+
+    <div id="kontak" class="content">
+        <section>
+            <h2>Kontak Kami</h2>
+            <p>Alamat: Jl.moramo.Desa Tanjung Tiram</p>
+            <p>Email: info email. jibrildp728@gmail.com</p>
+            <p>Telepon: (+62) 81222203015</p>
+        </section>
+    </div>
+
+    <footer>
+        &copy; 2024 Sekolah SMAN 20 KONAWEKONAWE SELATAN All rights reserved.
+    </footer>
+
+    <script>
+        function showPage(page) {
+            const contents = document.querySelectorAll('.content');
+            contents.forEach(content => {
+                content.classList.remove('active');
+            });
+            document.getElementById(page).classList.add('active');
+        }
+    </script>
+
+</body>
+</html>
